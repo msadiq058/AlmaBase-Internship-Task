@@ -8,13 +8,21 @@ Find the n most popular repositories of a given organization on Github (Eg:https
 <br>
 Using the opensource GitHub API https://github-api.kohsuke.org/ to fetch the organization data , repos data and other information.
 <br>
-#Steps performed are in the given manner
+## For sample Output 
+AlmaBase Task -> Sample Output<br>
+or click on the link https://github.com/msadiq058/AlmaBase-Internship-Task/tree/main/AlmaBase%20Task/Sample%20Output 
+<br>
+## Steps performed are in the given manner
 1. Fetch the repos of the organization and its forks count.
 2. Sort this fetched data with respect to forks count so that we can choose the most n forked repos.
 3. For each repo in n repos we fetch the commits information. <br>And then for each commit we update the value of committer in the <br>map of < committerand number of commmit >.
 4. Sort this data on basis of number of commits and then will store the<br> top m committies on basis of number of commits.
 <br>
 <br>
+
+## Pre-requisites :
+ JAVA 11
+ 
 
 ## Steps to execution :
 
@@ -24,9 +32,7 @@ Using the opensource GitHub API https://github-api.kohsuke.org/ to fetch the org
 4. Execute the code and insert the prompted input.
 5. Output will be displayed on the provided screen in GUI.
 <br>
-
+## Easy step for execution :
+Clone the jar file and run it.
 ## Note
 For repos which have a large number of forks and commits please be patient<br> it will take some time to fetch the data.
-
-
-

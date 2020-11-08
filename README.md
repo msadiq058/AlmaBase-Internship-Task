@@ -33,6 +33,8 @@ or click on the link https://github.com/msadiq058/AlmaBase-Internship-Task/tree/
 5. Output will be displayed on the provided screen in GUI.
 <br>
 ## Easy step for execution :
-Clone the jar file and run it.
+
+Clone the jar file and run it.<br>
+
 ## Note
 For repos which have a large number of forks and commits please be patient<br> it will take some time to fetch the data.

@@ -1,9 +1,10 @@
-# AlmaBase-Internship-Task
-TASK <br>
+# AlmaBase-Internship-Task<br>
+
+## TASK <br>
 Find the n most popular repositories of a given organization on Github (Eg:https://github.com/google) based on the number of forks. For each such repo find the top m committees and their commit counts. 
 <br>
 <br>
-# Proposed Solution
+## Proposed Solution
 <br>
 Using the opensource GitHub API https://github-api.kohsuke.org/ to fetch the organization data , repos data and other information.
 <br>
@@ -15,7 +16,7 @@ Using the opensource GitHub API https://github-api.kohsuke.org/ to fetch the org
 <br>
 <br>
 
-# Steps to execution :
+## Steps to execution :
 
 1. git clone https://github.com/msadiq058/AlmaBase-Internship-Task.git
 2. Build the project in IntelliJ Idea and build the maven dependencies for API.
@@ -24,7 +25,7 @@ Using the opensource GitHub API https://github-api.kohsuke.org/ to fetch the org
 5. Output will be displayed on the provided screen in GUI.
 <br>
 
-###Note
+## Note
 For repos which have a large number of forks and commits please be patient<br> it will take some time to fetch the data.
 
 

@@ -15,6 +15,8 @@ import java.util.*;
 
 public class PerformGithubTask {
 
+    private final String GitHubOAuth= "";
+
     // Variables for storing the input data.
 
     private String organization;
@@ -54,7 +56,7 @@ public class PerformGithubTask {
         //   Initializing the github contructor for fetching the data with
         //   Here use your personal authentication token.
 
-        GitHub github = new GitHubBuilder().withOAuthToken("").build();
+        GitHub github = new GitHubBuilder().withOAuthToken(GitHubOAuth).build();
 
         /*
             Finding for the organization if present then perform next operation

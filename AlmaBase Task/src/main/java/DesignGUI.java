@@ -1,4 +1,9 @@
+/*
 
+    This program handles the all GUI task to be performed.
+    Like input the data and display the data in the field provided;
+
+ */
 import java.awt.Color;
 import java.awt.FlowLayout;
 import java.awt.GridLayout;
@@ -25,12 +30,14 @@ public class DesignGUI extends JFrame  {
     private int repo_numbers , committers_numbers;
 
 
+    /*
+    This contructor handles the whole mechanism of GUI.
+     */
+
     public DesignGUI(){
-//        System.out.println("Hello");
         setSize(900,400);
 
         setTitle("GitHub Task");
-//        System.out.println("Hello");
         JSplitPane splitPane = new JSplitPane();
         splitPane.setOrientation(JSplitPane.HORIZONTAL_SPLIT);
         splitPane.setDividerLocation(300);
@@ -58,26 +65,24 @@ public class DesignGUI extends JFrame  {
         addNameControlsRepo(namePanel2);
         addNameControlsCommitters(namePanel3);
 
+        /*
+        Here the input fetched is processed to main class
+        and main class performs the required task.
+         */
 
         JButton submitButton = new JButton("Get Data");
         submitButton.addMouseListener(new MouseAdapter(){
             public void mouseClicked(MouseEvent evt) {
                 if(SwingUtilities.isLeftMouseButton(evt)){
 
-//                    Main.check = true;
-//                    String fullStr = org_name+" "+String.valueOf(repo_numbers)+" "+String.valueOf(committers_numbers);
-//                    String ans = org_name+repo_numbers+committers_numbers;
-//                    textArea.append(ans);
-//                    System.out.println("Hii");
-                    PerformGithubTask perform = new PerformGithubTask(org_name,repo_numbers,committers_numbers);
+                    Main main = new Main(org_name,repo_numbers,committers_numbers);
+                    String result = "";
                     try {
-                        perform.PerformTask();
+                        result = main.initPerformTask();
                     }
                     catch (Exception e){
-
                     }
-                    String result = perform.getResult();
-                    textArea.append(result);
+                    textArea.setText(result);
 
                 }
             }
@@ -92,21 +97,21 @@ public class DesignGUI extends JFrame  {
 
     }
 
+    /*
+    This function handles the input for organization name.
+     */
     private void addNameControlsString(JPanel namePanel){
         JLabel fName = new JLabel("Organization Name");
         namePanel.add(fName);
 
-        final JTextField Name = new JTextField(15);
+        final JTextField Name = new JTextField(20);
         Name.setBackground(Color.WHITE);
 
         Name.addKeyListener(new KeyAdapter() {
             public void keyTyped(KeyEvent e) {
                 char letter = e.getKeyChar();
-                if (Name.getText().length() >= 15 )
+                if (Name.getText().length() >= 20 )
                     e.consume();
-//                else if(!Character.isLetter(letter)){
-//                    e.consume();
-//                }
             }
         });
 
@@ -123,6 +128,10 @@ public class DesignGUI extends JFrame  {
         namePanel.add(Name);
     }
 
+    /*
+    This function handles the input for
+    repos to be counted.
+     */
     private void addNameControlsRepo(JPanel namePanel){
         String name = adjustText("Repo count");
         JLabel count = new JLabel(name);
@@ -154,7 +163,10 @@ public class DesignGUI extends JFrame  {
 
         namePanel.add(repo_count);
     }
-
+    /*
+    This function handles the input for
+    committies to be counted.
+     */
     private void addNameControlsCommitters(JPanel namePanel){
         String name = adjustText("Committers count");
         JLabel count = new JLabel(name);
@@ -187,6 +199,7 @@ public class DesignGUI extends JFrame  {
         namePanel.add(repo_count);
     }
 
+
     private String adjustText(String name){
         String org = "Organization Name";
         int limit = org.length() - name.length();
@@ -194,10 +207,6 @@ public class DesignGUI extends JFrame  {
             name = name +" ";
         }
         return name;
-
-    }
-
-    private void setValue(){
 
     }
 

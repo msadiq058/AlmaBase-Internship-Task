@@ -24,7 +24,7 @@ Using the opensource GitHub API https://github-api.kohsuke.org/ to fetch the org
 5. Output will be displayed on the provided screen in GUI.
 <br>
 
-###Note
+## Note
 For repos which have a large number of forks and commits please be patient<br> it will take some time to fetch the data.
 
 

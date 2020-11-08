@@ -32,6 +32,7 @@ or click on the link https://github.com/msadiq058/AlmaBase-Internship-Task/tree/
 4. Execute the code and insert the prompted input.
 5. Output will be displayed on the provided screen in GUI.
 <br>
+
 ## Easy step for execution :
 
 Clone the jar file and run it.<br>
